@@ -20,6 +20,7 @@ $("#update_user").submit(function (event) {
 
     $.ajax(request).done(function (response) {
         alert("Data Updated Successfully!");
+        window.location.replace("/");
     });
 });
 

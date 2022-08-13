@@ -4,12 +4,11 @@ var User = require("../model/model");
 exports.create = (req, res) => {
     // validate request
     if (!req.body) {
-        res.status(400).send({ message: "Content can not be emtpy!" });
+        res.status(400).send({ message: "Content can not be empty!" });
         return;
     }
 
     // new user
-    console.log(req.body);
     const user = new User({
         name: req.body.name,
         email: req.body.email,
